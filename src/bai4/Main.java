@@ -5,15 +5,15 @@ import java.io.IOException;
 public class Main {
     // Method C
     public static void saveToFile() throws IOException {
-        System.out.println("Đang ghi dữ liệu vào file");
+        System.out.println("Working c");
 
-        // Giả lập lỗi khi ghi file
-        throw new IOException("Lỗi ghi file");
+        // Giả lập lỗi
+        throw new IOException("Lỗi c");
     }
 
     // Method B
     public static void processUserData() throws IOException {
-        System.out.println("Đang xử lý dữ liệu người dùng");
+        System.out.println("Working B");
 
         // Gọi method C và đẩy lỗi lên trên
         saveToFile();
@@ -25,7 +25,7 @@ public class Main {
             processUserData(); //gọi method B
         }
         catch (IOException e) {
-            System.out.println("Đã xảy ra lỗi khi lưu dữ liệu: " + e.getMessage());
+            System.out.println("Đã xảy ra lỗi: " + e.getMessage());
         }
     }
 }
